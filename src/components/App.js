@@ -43,7 +43,7 @@ function App() {
           points:
             action.payload === question.correctOption
               ? state.points + question.points
-              : state.poitns,
+              : state.points,
         };
       case "nextQuestion":
         return {
@@ -93,6 +93,7 @@ function App() {
               numOfQuestions={numOfQuestions}
               maxPoints={maxPoints}
               points={points}
+              answer={answer}
             />
             <Questions
               question={questions[index]}
